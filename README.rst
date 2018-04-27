@@ -47,7 +47,7 @@ The example configuration uses the ``--dry-run`` as a safety flag to prevent dow
 Configuration
 =============
 
-The downscaler is configured via command line args, environment variables and/or Kubernetes annotations.
+The downscaler is configured via command line args, environment variables and/or Kubernetes annotations. 
 
 Time definitions (e.g. ``DEFAULT_UPTIME``) accept a comma separated list of specifications, e.g. the following configuration would downscale all deployments for non-work hours:
 
@@ -83,6 +83,8 @@ Available command line options:
     Exclude namespaces from downscaling (default: kube-system), can also be configured via environment variable ``EXCLUDE_NAMESPACES``
 ``--exclude-deployments``
     Exclude specific deployments from downscaling (default: kube-downscaler, downscaler), can also be configured via environment variable ``EXCLUDE_DEPLOYMENTS``
+
+Note: Uptime/Downtime settings are global, they cannot be set per individual name space.
 
 
 Contributing
